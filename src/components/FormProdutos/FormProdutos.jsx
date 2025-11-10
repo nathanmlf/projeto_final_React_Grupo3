@@ -1,4 +1,3 @@
-import Header from "../../components/Header/Header.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -60,79 +59,82 @@ const FormProdutos = ({ setProducts }) => {
 
   return (
     <>
-      <main>
-        <div>
-          <form onSubmit={handleSubmit(addProduct)}>
-            <h2>Cadastro de Produtos</h2>
-            <div>
-              <label htmlFor="title">Nome do produto:</label>
-              <input
-                type="text"
-                id="title"
-                name="title"
-                placeholder="Nome do produto"
-                {...register("title")}
-              />
-              <p>{errors.title?.message}</p>
-            </div>
+      <main className={styles.mainContainer}>
+        <form
+          className={styles.formContainer}
+          onSubmit={handleSubmit(addProduct)}
+        >
+          <h1>Cadastro de Produtos</h1>
+          <div className={styles.inputContainer}>
+            <label htmlFor="title">Nome do produto:</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Nome do produto"
+              {...register("title")}
+            />
+            <p>{errors.title?.message}</p>
+          </div>
 
-            <div>
-              <label htmlFor="price">Preço do produto:</label>
-              <input
-                type="number"
-                step="0.01"
-                id="price"
-                name="price"
-                placeholder="Ex: 99.90"
-                {...register("price")}
-              />
-              <p>{errors.price?.message}</p>
-            </div>
+          <div className={styles.inputContainer}>
+            <label htmlFor="price">Preço do produto:</label>
+            <input
+              type="number"
+              step="0.01"
+              id="price"
+              name="price"
+              placeholder="Ex: 99.90"
+              {...register("price")}
+            />
+            <p>{errors.price?.message}</p>
+          </div>
 
-            <div>
-              <label htmlFor="description">Descrição:</label>
-              <textarea
-                id="description"
-                name="description"
-                {...register("description")}
-                placeholder="Detalhes do produto..."
-                rows="10"
-                cols="50"
-              />
-              <span>{errors.description?.message}</span>
-            </div>
+          <div className={styles.inputContainer}>
+            <label htmlFor="description">Descrição:</label>
+            <textarea
+              id="description"
+              name="description"
+              {...register("description")}
+              placeholder="Detalhes do produto..."
+            />
+            <span>{errors.description?.message}</span>
+          </div>
 
-            <div>
-              <label htmlFor="category">Categoria do produto:</label>
-              <select id="category" name="category" {...register("category")}>
-                <option value="">Selecione a categoria...</option>
-                <option value="">Selecione a categoria...</option>
-                <option value="electronics">Eletrônicos</option>
-                <option value="jewelery">Joias</option>
-                <option value="men's clothing">Roupas Masculinas</option>
-                <option value="women's clothing">Roupas Femininas</option>
-              </select>
-              <p>{errors.category?.message}</p>
-            </div>
+          <div className={styles.inputContainer}>
+            <label htmlFor="category">Categoria do produto:</label>
+            <select id="category" name="category" {...register("category")}>
+              <option value="">Selecione a categoria...</option>
+              <option value="jewelery">Joias</option>
+              <option value="men's clothing">Roupas Masculinas</option>
+              <option value="women's clothing">Roupas Femininas</option>
+            </select>
+            <p>{errors.category?.message}</p>
+          </div>
 
-            <div>
-              <label htmlFor="image">URL da imagem:</label>
-              <input
-                type="url"
-                id="image"
-                name="image"
-                {...register("image")}
-              ></input>
-              <span>{errors.image?.message}</span>
-            </div>
+          <div className={styles.inputContainer}>
+            <label htmlFor="image">URL da imagem:</label>
+            <input
+              type="url"
+              id="image"
+              name="image"
+              placeholder=""
+              {...register("image")}
+            ></input>
+            <span>{errors.image?.message}</span>
+          </div>
 
-            <div>
-              <button type="submit" disabled={loading} button>
-                {loading ? "Enviando..." : "Cadastrar Produto"}
-              </button>
-            </div>
-          </form>
-        </div>
+          <div className={styles.btnContainer}>
+            <button
+              className={styles.btnSubmit}
+              type="submit"
+              disabled={loading}
+              button
+            >
+              {loading ? "Enviando..." : "Cadastrar Produto"}
+            </button>
+          </div>
+        </form>
       </main>
     </>
   );
