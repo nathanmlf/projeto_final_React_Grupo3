@@ -44,9 +44,9 @@ A **Top Serra** é uma plataforma de e-commerce desenvolvida em React que oferec
 
 ### 🛍️**Categorias de Produtos**
 
-- 💎 **Jewelry** - Joias e acessórios premium  
-- 👕 **Men's Clothing** - Moda masculina
-- 👗 **Women's Clothing** - Moda feminina
+- 💎 **Jóias** - Joias e acessórios premium  
+- 👕 **Roupas Masculinas** - Moda masculina
+- 👗 **Roupas Femininas** - Moda feminina
   
 -------------------------------------------  
 
