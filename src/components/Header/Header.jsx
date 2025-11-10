@@ -2,7 +2,7 @@ import * as styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.headerContainer}>
       <div className={styles.headerSubContainer}>
         <div className={styles.linkContainer}>
           <a className={styles.linkHome} href="">
@@ -32,6 +32,9 @@ const Header = () => {
         <div className={styles.linkContainer}>
           <a className={styles.linkLogin} href="">
             Login
+          </a>
+          <a className={styles.linkLogin} href="">
+            Logout
           </a>
         </div>
       </div>
