@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+
 import styles from "./Estoque.module.css";
 import { FiltroEstoque } from "../../components/FiltroEstoque/FiltroEstoque";
+import { useState } from "react";
 
 // Definindo o componente Estoque
 const Estoque = () => {
@@ -12,11 +13,13 @@ const Estoque = () => {
     { id: 4, descricao: "Produto Baixo Estoque", quantidade: 5, imagemUrl: "https://www.grupocpcon.com/wp-content/uploads/2024/01/empresas-que-fazem-balanco-de-estoque-768x439.jpg" },
   ]);
 
+  
   const [produtosFiltrados, setProdutosFiltrados] = useState(produtos);
 
   const handleFiltrar = (produtosFiltrados) => {
     setProdutosFiltrados(produtosFiltrados);
   };
+
 
   return (
     <div className={styles['estoque-container']}>
