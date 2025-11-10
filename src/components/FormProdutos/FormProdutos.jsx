@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

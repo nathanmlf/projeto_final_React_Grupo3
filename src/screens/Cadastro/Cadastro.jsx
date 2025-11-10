@@ -1,5 +1,7 @@
+import FormProdutos from "../../components/FormProdutos/FormProdutos.jsx";
+
 const Cadastro = () => {
-  return <div>Cadastro</div>;
+  return <FormProdutos />;
 };
 
 export default Cadastro;
