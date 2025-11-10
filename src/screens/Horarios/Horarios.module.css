@@ -1,0 +1,148 @@
+.wrapper {
+  display: flex;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 0;
+}
+
+.calendarContainer {
+  flex: 3;
+  background: white;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.calendarContainer h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.sidePanel {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.sidePanel button {
+  background: #1D546C;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px
+}
+
+.sidePanel button:hover {
+  background: #0C2B4E;
+}
+
+.boxGreen {
+  width: 16px;
+  height: 16px;
+  background: #c8f7c5;
+  border: 2px solid #4caf50;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.boxGray {
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  font-size: 20px;
+}
+
+.weekHeader {
+  text-align: center;
+  /* background: #e8efff; */
+  box-shadow: #aaaaaaad 0px 0px 2px;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.day {
+  text-align: center;
+  padding: 12px;
+  background: #f8f8f8;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 20px;
+}
+
+/* Domingo */
+.disabled {
+  background: #eee;
+  color: #aaa;
+}
+
+.pontoBatido {
+  background: #c8f7c5 ;
+  border: 2px solid #4caf50;
+  font-weight: 700;
+}
+
+.empty {
+  visibility: hidden;
+}
+
+/* // adicional */
+.darkButton {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background: #0C2B4E;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 9999;
+  transition: 0.2s;
+}
+
+.dark {
+  background: #121212 ;
+  color: #f1f1f1;
+}
+
+.dark .calendarContainer,
+.dark .sidePanel {
+  background: #1e1e1e ;
+  color: #f1f1f1 ;
+  box-shadow: none;
+}
+
+.dark .day {
+  background: #2a2a2a ;
+  border-color: #444 ;
+}
+
+.dark .weekHeader {
+  background: #333 ;
+  color: #fff ;
+}
+
+.dark .pontoBatido {
+  background: #145214 ;
+  border-color: #2ecc71 ;
+}
+
