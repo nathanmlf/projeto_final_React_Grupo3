@@ -6,10 +6,10 @@ import { FiltroEstoque } from "../../components/FiltroEstoque/FiltroEstoque";
 const Estoque = () => {
   // Criando um array de produtos
   const [produtos] = useState([
-    { id: 1, descricao: "Jewelery", quantidade: 20, imagemUrl: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" },
-    { id: 2, descricao: "Men's clothing", quantidade: 32, imagemUrl: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" },
-    { id: 3, descricao: "Woman's clothing", quantidade: 18, imagemUrl: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg" },
-    { id: 4, descricao: "Produto Baixo Estoque", quantidade: 5, imagemUrl: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" },
+    { id: 1, descricao: "Jóias", quantidade: 20, imagemUrl: "https://img.freepik.com/fotos-premium/joias-na-vitrine-da-loja_756262-8079.jpg" },
+    { id: 2, descricao: "Roupas Masculinas", quantidade: 32, imagemUrl: "https://i.pinimg.com/originals/46/34/e2/4634e2de80fa2a26c442130af989eb8f.jpg" },
+    { id: 3, descricao: "Roupas Femininas", quantidade: 18, imagemUrl: "https://i.pinimg.com/originals/c1/ed/88/c1ed880dd75ab3a0bf74910edaf79a9c.jpg" },
+    { id: 4, descricao: "Produto Baixo Estoque", quantidade: 5, imagemUrl: "https://www.grupocpcon.com/wp-content/uploads/2024/01/empresas-que-fazem-balanco-de-estoque-768x439.jpg" },
   ]);
 
   const [produtosFiltrados, setProdutosFiltrados] = useState(produtos);
