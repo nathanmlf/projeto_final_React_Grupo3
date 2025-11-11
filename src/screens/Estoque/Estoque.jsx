@@ -2,6 +2,7 @@
 import styles from "./Estoque.module.css";
 import { FiltroEstoque } from "../../components/FiltroEstoque/FiltroEstoque";
 import { useState } from "react";
+import Header from "../../components/Header/Header";
 
 // Definindo o componente Estoque
 const Estoque = () => {
@@ -22,6 +23,8 @@ const Estoque = () => {
 
 
   return (
+    <div>
+    <Header/>
     <div className={styles['estoque-container']}>
       <h1>Estoque de Produtos</h1>
       
@@ -69,6 +72,7 @@ const Estoque = () => {
           )}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Login from "../screens/Login/Login.jsx";
 import Estoque from "../screens/Estoque/Estoque.jsx";
 import Horarios from "../screens/Horarios/Horarios.jsx";
 import Cadastro from "../screens/Cadastro/Cadastro.jsx";
+import Card from "../components/Card/Card.jsx";
 import { Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
@@ -14,6 +15,7 @@ const AppRouter = () => {
         <Route path="/estoque" element={<Estoque />}></Route>
         <Route path="/horarios" element={<Horarios />}></Route>
         <Route path="/cadastro" element={<Cadastro />}></Route>
+        <Route path="/card" element={<Card />}></Route>
       </Routes>
     </>
   );
