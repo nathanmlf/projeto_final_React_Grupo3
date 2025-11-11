@@ -1,7 +1,6 @@
 import * as styles from "./Header.module.css";
 
 const Header = () => {
-  return <div>Header</div>;
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerSubContainer}>
