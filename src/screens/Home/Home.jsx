@@ -7,7 +7,10 @@ function Home() {
     <div className="relative w-full h-screen overflow-hidden">
       <div
         className="absolute inset-0 bg-gray-800 bg-cover bg-center -z-10"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1445205170230-053b8a164a02?q=80&w=1976&auto=format&fit=crop')" }}
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1445205170230-053b8a164a02?q=80&w=1976&auto=format&fit=crop')",
+        }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
