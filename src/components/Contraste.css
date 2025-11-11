@@ -13,8 +13,10 @@
   transition: 0.2s;
 }
 
-.dark {
+.dark,
+.main-content {
   background: #121212;
+  min-height: 100vh;
   color: #f1f1f1;
 }
 
@@ -23,17 +25,17 @@
 .dark header,
 .dark footer,
 .dark main,
-.dark article {
-  background-color: #1a1a1a ;
+.dark article{
+  background-color: #121212 ;
   color: #f1f1f1 ;
 }
 
 .dark .card,
 .dark .box,
 .dark .panel {
-  background: #222 ;
-  color: #fff ;
-  border-color: #333 ;
+  background: #222;
+  color: #fff;
+  border: 22px solid #fff; 
 }
 
 .dark input,
