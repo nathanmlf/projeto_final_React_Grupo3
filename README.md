@@ -14,7 +14,7 @@ Uma moderna loja virtual em React especializada em joias e moda feminina e mascu
 - [Scripts Disponíveis](#scripts-disponíveis)
 - [Deploy](#deploy)
 - [Contribuição](#contribuição)
-- 
+  
 ---------------------------------------
 
 ## 🎯 Visão Geral
