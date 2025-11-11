@@ -27,10 +27,20 @@ A **Top Serra** é uma plataforma de e-commerce desenvolvida em React que oferec
 
 ### 🏠 **Telas (Screens)**
 - **Home** - Página inicial com acesso ao sistema
+  
 - **Estoque** - Galeria de produtos com sistema de filtros
+  
+  <img width="1892" height="917" alt="Captura de tela 2025-11-11 165938" src="https://github.com/user-attachments/assets/c90d3aa7-d465-4d58-8c1b-1ac99e321f6b" />
+
 - **Quadro de Horários** - Agenda e horários de funcionamento
-- **Login** - Área de acesso para funcionários
+
+  <img width="1883" height="908" alt="Captura de tela 2025-11-11 165903" src="https://github.com/user-attachments/assets/ee1ccbc3-e49b-4f50-99ca-f06073261b38" />
+
+  
 - **Formulário de Produtos** - Adição de novos produtos ao catálogo
+
+  <img width="1887" height="927" alt="Captura de tela 2025-11-11 165831" src="https://github.com/user-attachments/assets/a3e339ff-f879-4faf-921a-54196528c18a" />
+
   
 -------------------------------------------
 
