@@ -2,6 +2,7 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .filtro-input {
@@ -19,4 +20,3 @@
   border-color: #007bff;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
-

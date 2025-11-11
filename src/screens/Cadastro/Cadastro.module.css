@@ -1,0 +1,12 @@
+.paginaContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.formContainer {
+  grid-column: 1;
+}
+
+.cardsContainer {
+  grid-column: 2;
+}

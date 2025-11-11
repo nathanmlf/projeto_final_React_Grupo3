@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -25,7 +24,6 @@ const validationFormProdutos = yup
 
 const FormProdutos = ({ setProducts }) => {
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
   const {
     register,
@@ -47,7 +45,6 @@ const FormProdutos = ({ setProducts }) => {
       setProducts((produtosAtuais) => [...produtosAtuais, newProduct]);
 
       console.log("Produto (simulado) enviado com sucesso!", newProduct);
-      navigate("/");
       reset();
     } catch (error) {
       console.error("Erro na requisição!", error);
@@ -129,7 +126,6 @@ const FormProdutos = ({ setProducts }) => {
               className={styles.btnSubmit}
               type="submit"
               disabled={loading}
-              button
             >
               {loading ? "Enviando..." : "Cadastrar Produto"}
             </button>
