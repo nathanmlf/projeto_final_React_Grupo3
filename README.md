@@ -38,7 +38,7 @@ A **Top Serra** é uma plataforma de e-commerce desenvolvida em React que oferec
 - **Card's** - Componentes reutilizáveis para exibição de produtos
 - **Formulário** - Formulários com validação para diferentes propósitos
 - **Header** - Cabeçalho com navegação e toggle de modo escuro
-- **Footer** - Rodapé com informações da empresa
+
   
 ----------------------------------------------
 
@@ -51,10 +51,9 @@ A **Top Serra** é uma plataforma de e-commerce desenvolvida em React que oferec
 -------------------------------------------  
 
 ### 🔍 **Sistema de Filtros**
-- Filtro por preço
+
 - Pesquisa por ID
-- Busca por categoria
-- Ordenação personalizada
+- Pesquisa por descrição
 
 -------------------------------------
 
