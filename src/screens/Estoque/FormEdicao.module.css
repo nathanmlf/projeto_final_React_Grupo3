@@ -1,0 +1,110 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.formContainer {
+  background-color: #f4f4f4;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.formContainer h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.formContainer input,
+.formContainer textarea,
+.formContainer select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  border: 2px solid #f4f4f4;
+  transition: border-color 0.2s;
+}
+
+.formContainer input:focus,
+.formContainer textarea:focus,
+.formContainer select:focus {
+  outline: none;
+  border-color: #0c2b4e;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputContainer p,
+.inputContainer span {
+  color: #d93025;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.inputContainer textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btnSubmit {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0c2b4e;
+  color: #f4f4f4;
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+
+.btnSubmit:hover {
+  background-color: rgba(12, 43, 78, 0.8);
+}
+
+.btnCancel {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ddd;
+  color: #333;
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+
+.btnCancel:hover {
+  background-color: #ccc;
+}
