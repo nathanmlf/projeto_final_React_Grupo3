@@ -13,9 +13,16 @@ export function FiltroEstoque({ produtos, onFiltrar }) {
         ? produtos
         : produtos.filter((produto) => {
             const pesquisaLower = valor.toLowerCase();
+            const descricao = produto.descricao || produto.description || "";
+            const titulo = produto.title || "";
+            const categoria = produto.category || "";
+            const id = produto.id?.toString() || "";
+            
             return (
-              produto.descricao.toLowerCase().includes(pesquisaLower) ||
-              produto.id.toString().includes(pesquisaLower)
+              descricao.toLowerCase().includes(pesquisaLower) ||
+              titulo.toLowerCase().includes(pesquisaLower) ||
+              categoria.toLowerCase().includes(pesquisaLower) ||
+              id.includes(pesquisaLower)
             );
           });
 
@@ -26,7 +33,7 @@ export function FiltroEstoque({ produtos, onFiltrar }) {
     <div className={styles["filtro-container"]}>
       <input
         type="text"
-        placeholder="Pesquisar por descrição ou ID..."
+        placeholder="Pesquisar por título, descrição, categoria ou ID..."
         value={pesquisa}
         onChange={handlePesquisa}
         className={styles["filtro-input"]}
