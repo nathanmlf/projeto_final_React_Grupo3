@@ -73,6 +73,7 @@ const Estoque = () => {
         </tbody>
       </table>
     </div>
+    
     </div>
   );
 };
