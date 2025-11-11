@@ -1,0 +1,66 @@
+.darkButton {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background: #0C2B4E;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 9999;
+  transition: 0.2s;
+}
+
+.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+.dark div,
+.dark section,
+.dark header,
+.dark footer,
+.dark main,
+.dark article {
+  background-color: #1a1a1a ;
+  color: #f1f1f1 ;
+}
+
+.dark .card,
+.dark .box,
+.dark .panel {
+  background: #222 ;
+  color: #fff ;
+  border-color: #333 ;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background: #2b2b2b ;
+  color: #fff ;
+  border: 1px solid #444 ;
+}
+
+.dark table {
+  background: #1a1a1a ;
+  color: #fff ;
+}
+
+.dark th,
+.dark td {
+  background: #222 ;
+  border-color: #333 ;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark button:not(.darkButton) {
+  background: #333 ;
+  color: white ;
+  border-color: #555 ;
+}
