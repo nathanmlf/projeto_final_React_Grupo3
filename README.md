@@ -27,6 +27,9 @@ A **Top Serra** é uma plataforma de e-commerce desenvolvida em React que oferec
 
 ### 🏠 **Telas (Screens)**
 - **Home** - Página inicial com acesso ao sistema
+
+  <img width="1629" height="757" alt="Captura de tela 2025-11-11 184518" src="https://github.com/user-attachments/assets/56eabd80-0caa-4f69-8c65-0e5ec8ca5f0c" />
+
   
 - **Estoque** - Galeria de produtos com sistema de filtros
   
@@ -45,9 +48,12 @@ A **Top Serra** é uma plataforma de e-commerce desenvolvida em React que oferec
 -------------------------------------------
 
 ### 🧩 **Componentes**
-- **Card's** - Componentes reutilizáveis para exibição de produtos
-- **Formulário** - Formulários com validação para diferentes propósitos
-- **Header** - Cabeçalho com navegação e toggle de modo escuro
+
+- **FiltroEstoque** 
+- **FormProdutos**
+- **Header**
+- **ListaProdutos**
+-  **ProtectedRoute**
 
   
 ----------------------------------------------
@@ -102,8 +108,7 @@ A **Top Serra** é uma plataforma de e-commerce desenvolvida em React que oferec
 ├── 📁 Src/    
   ├── 📁 components.  
   |── 📁 routes.        
-  ├── 📁 screens.     
-  ├── 📁 exception.     
+  ├── 📁 screens.         
   ├── 📄 APP.jsx.  
   ├── 📄 global.css.    
   ├── 📄 main.jsx.
@@ -150,7 +155,7 @@ npm run dev
 
 ## 🌐 Deploy
 
-🔗 [Acesse o deploy do projeto](https://meuprojeto-fake-deploy.vercel.app)
+https://meuprojeto-fake-deploy.vercel.app](https://projeto-final-react-grupo3.vercel.app/
 
 -------------------------------------
 
