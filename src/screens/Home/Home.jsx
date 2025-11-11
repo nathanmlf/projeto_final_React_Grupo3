@@ -1,10 +1,9 @@
-const Home = () => {
-  return <div>Home</div>;
-};
-=======
-import React from 'react';
-import Header from '../../components/Header/Header';
-
+// const Home = () => {
+//   return <div>Home</div>;
+// };
+// =======
+import React from "react";
+import Header from "../../components/Header/Header";
 
 function Home() {
   return (
@@ -40,6 +39,6 @@ function Home() {
       </main>
     </div>
   );
-} 
+}
 
 export default Home;
