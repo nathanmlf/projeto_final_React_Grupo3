@@ -1,7 +1,7 @@
+import * as styles from "./Header.module.css";
+
 const Header = () => {
-<<<<<<< Updated upstream
   return <div>Header</div>;
-=======
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerSubContainer}>
@@ -41,7 +41,6 @@ const Header = () => {
       </div>
     </header>
   );
->>>>>>> Stashed changes
 };
 
 export default Header;

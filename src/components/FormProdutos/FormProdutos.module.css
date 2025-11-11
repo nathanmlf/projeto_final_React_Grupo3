@@ -1,0 +1,104 @@
+.mainContainer {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  background-color: #f4f4f4;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  margin-top: 40px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.25rem;
+}
+
+.formContainer h1 {
+  text-align: center;
+}
+
+.formContainer input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.formContainer textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.formContainer select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputContainer textarea {
+  resize: none;
+}
+
+.inputContainer input,
+.inputContainer textarea,
+.inputContainer select {
+  border: 2px solid #f4f4f4;
+  transition: border-color 0.2s;
+}
+
+.inputContainer input:focus,
+.inputContainer textarea:focus,
+.inputContainer select:focus {
+  outline: none;
+  border-color: #0c2b4e;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnSubmit {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0c2b4e;
+  color: #f4f4f4;
+  transition: background-color 0.2s;
+}
+
+.btnSubmit:hover {
+  background-color: rgba(12, 43, 78, 0.8);
+}
+
+@media (max-width: 740px) {
+  .mainContainer {
+    padding: 20px;
+  }
+  .formContainer {
+    gap: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .formContainer {
+    gap: 10px;
+    font-size: 1rem;
+  }
+}
