@@ -4,16 +4,39 @@ import Estoque from "../screens/Estoque/Estoque.jsx";
 import Horarios from "../screens/Horarios/Horarios.jsx";
 import Cadastro from "../screens/Cadastro/Cadastro.jsx";
 import { Route, Routes } from "react-router-dom";
+import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/estoque" element={<Estoque />}></Route>
-        <Route path="/horarios" element={<Horarios />}></Route>
-        <Route path="/cadastro" element={<Cadastro />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        
+        <Route
+          path="/estoque"
+          element={
+            <ProtectedRoute requiredRole="admin">
+              <Estoque />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/horarios"
+          element={
+            <ProtectedRoute requiredRole="admin">
+              <Horarios />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/cadastro"
+          element={
+            <ProtectedRoute requiredRole="admin">
+              <Cadastro />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </>
   );

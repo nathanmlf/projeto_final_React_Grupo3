@@ -14,6 +14,10 @@
   width: 250px;
   padding: 20px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: flex;              
+  flex-direction: column;     
+  min-height: 300px;          
 }
 
 .card:hover {
@@ -21,11 +25,49 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
 .nome {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0;
   color: #222;
+  flex: 1;
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  color: #dc3545;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.deleteButton:hover {
+  background-color: #fee;
+  color: #c82333;
+  transform: scale(1.1);
+}
+
+.deleteButton:active {
+  transform: scale(0.95);
+}
+
+.deleteButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .descricao {
@@ -48,10 +90,11 @@
   font-weight: bold;
   color: #0a8754;
   margin-top: 10px;
+  margin-bottom: auto;        
 }
 
 .botaoEditar {
-  margin-top: 15px;
+  margin-top: auto;            
   padding: 8px 12px;
   background-color: #f0ad4e;
   color: white;

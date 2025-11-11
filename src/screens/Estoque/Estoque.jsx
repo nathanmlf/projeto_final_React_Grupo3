@@ -7,6 +7,7 @@ import { FiltroEstoque } from "../../components/FiltroEstoque/FiltroEstoque";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { FaTrash } from "react-icons/fa";
 
 const validacaoFormProdutos = yup
   .object({
@@ -27,6 +28,7 @@ const Estoque = () => {
   const [produtosFiltrados, setProdutosFiltrados] = useState([]);
   const [loading, setLoading] = useState(false);
   const [produtoEmEdicao, setProdutoEmEdicao] = useState(null);
+  const [excluindo, setExcluindo] = useState(null);
 
   const {
     register,
@@ -57,6 +59,38 @@ const Estoque = () => {
 
   const handleFiltrar = (produtosFiltrados) => {
     setProdutosFiltrados(produtosFiltrados);
+  };
+
+  const handleExcluir = async (id) => {
+    if (!window.confirm("Tem certeza que deseja excluir este produto?")) {
+      return;
+    }
+
+    const produtosAnteriores = produtos;
+    const produtosFiltradosAnteriores = produtosFiltrados;
+
+    const novosProdutos = produtos.filter((produto) => produto.id !== id);
+    const novosProdutosFiltrados = produtosFiltrados.filter(
+      (produto) => produto.id !== id
+    );
+    
+    setProdutos(novosProdutos);
+    setProdutosFiltrados(novosProdutosFiltrados);
+    setExcluindo(id);
+
+    try {
+      await axios.delete(`https://fakestoreapi.com/products/${id}`);
+      console.log("Produto excluído com sucesso");
+    } catch (error) {
+      console.error("Erro ao excluir produto:", error);
+      
+      setProdutos(produtosAnteriores);
+      setProdutosFiltrados(produtosFiltradosAnteriores);
+      
+      alert("Erro ao excluir produto. Tente novamente.");
+    } finally {
+      setExcluindo(null);
+    }
   };
 
   const handleSalvarEdicao = async (data) => {
@@ -159,7 +193,22 @@ const Estoque = () => {
         {produtosFiltrados.length > 0 ? (
           produtosFiltrados.map((produto) => (
             <div className={styles.card} key={produto.id}>
-              <h2 className={styles.nome}>{produto.title}</h2>
+              <div className={styles.cardHeader}>
+                <h2 className={styles.nome}>{produto.title}</h2>
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => handleExcluir(produto.id)}
+                  disabled={excluindo === produto.id}
+                  aria-label="Excluir produto"
+                  title="Excluir produto"
+                >
+                  {excluindo === produto.id ? (
+                    "Excluindo..."
+                  ) : (
+                    <FaTrash size={18} />
+                  )}
+                </button>
+              </div>
               <p className={styles.descricao}>{produto.description}</p>
               <p className={styles.categoria}>
                 <strong>Categoria:</strong> {produto.category}
